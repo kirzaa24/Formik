@@ -3,14 +3,24 @@
 }
 
 .button {
-	@apply text-sm text-white rounded-[3px] px-3 py-[6px] bg-[#eaedf5];
+	font-size: 0.875rem; /* text-sm */
+	color: #fff; /* text-white */
+	border-radius: 3px; /* rounded-[3px] */
+	padding: 6px 12px; /* px-3 py-[6px] */
+	background-color: #eaedf5; /* bg-[#eaedf5] */
 
 	&-blue {
-		@apply bg-[#0D69F2] transition-colors text-sm text-white rounded-[3px] px-3 py-[6px];
+		background-color: #0d69f2; /* bg-[#0D69F2] */
+		transition: background-color 0.2s;
+		font-size: 0.875rem; /* text-sm */
+		color: #fff; /* text-white */
+		border-radius: 3px; /* rounded-[3px] */
+		padding: 6px 12px; /* px-3 py-[6px] */
 	}
 
 	&:hover {
-		@apply bg-[#0D69F2] transition-colors;
+		background-color: #0d69f2; /* bg-[#0D69F2] */
+		transition: background-color 0.2s;
 	}
 }
 
@@ -53,7 +63,7 @@
 	@apply opacity-0 w-0 h-0;
 
 	&:checked + .switchSlider {
-		@apply bg-[#2196f3];
+		background-color: #2196f3;
 	}
 
 	&:checked + .switchSlider:before {
