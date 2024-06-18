@@ -1,0 +1,71 @@
+.addButton {
+	@apply w-full font-bold text-xs uppercase text-center text-[#acb6c3] p-6 border border-dashed border-gray-400 rounded-lg mb-6;
+}
+
+.button {
+	@apply text-sm text-white rounded-[3px] px-3 py-[6px] bg-[#eaedf5];
+
+	&-blue {
+		@apply bg-[#0D69F2] transition-colors text-sm text-white rounded-[3px] px-3 py-[6px];
+	}
+
+	&:hover {
+		@apply bg-[#0D69F2] transition-colors;
+	}
+}
+
+.field {
+	@apply block w-[343px] relative;
+
+	select {
+		@apply w-full border px-4 py-2 rounded-[3px] border-solid border-[#acb6c3] bg-[#eaedf5] text-sm cursor-not-allowed;
+
+		&:not(:disabled) {
+			@apply text-[#2f3441] bg-white cursor-pointer;
+		}
+	}
+
+	input {
+		@apply w-full border px-4 py-2 rounded-[3px] border-solid border-[#acb6c3] text-sm;
+		&.errorInput {
+			@apply border-red-300 text-red-300 bg-red-50;
+		}
+	}
+}
+
+.fieldWrapper {
+	@apply flex items-center gap-2 w-full min-h-[118px] shadow-[0_2px_23px_0_rgba(2,2,2,0.1)] p-6 rounded-lg p-6 bg-white;
+}
+
+.errorMessage {
+	@apply text-xs text-red-500 absolute left-0 -bottom-5;
+}
+
+.title {
+	@apply text-xs text-[#6b7683] mb-1 absolute left-0 -top-5;
+}
+
+.switchLabel {
+	@apply flex items-center gap-4 cursor-pointer;
+}
+
+.switchInput {
+	@apply opacity-0 w-0 h-0;
+
+	&:checked + .switchSlider {
+		@apply bg-[#2196f3];
+	}
+
+	&:checked + .switchSlider:before {
+		transform: translateX(16px);
+	}
+}
+
+.switchSlider {
+	@apply relative w-9 h-5 bg-[#ccc] rounded-[20px] cursor-pointer transition;
+
+	&:before {
+		@apply absolute h-4 w-4 left-[2px] bottom-[2px] bg-white rounded-[50%] transition;
+		content: '';
+	}
+}
